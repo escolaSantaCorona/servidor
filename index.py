@@ -129,6 +129,14 @@ def clear_history():
         print(f"An error occurred: {e}")
         return jsonify({"error": "Não foi possível limpar o histórico."}), 500
 
+@app.route('/')
+def home():
+    return 'Hello, World!'
 
-if __name__ == '__main__':
-    app.run()
+@app.route('/about')
+def about():
+    return 'About'
+
+
+#if __name__ == '__main__':
+    #app.run()
